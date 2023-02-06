@@ -22,5 +22,10 @@ namespace ShapeTracker.Models
     {
       return _side3;
     }
+
+    public void SetSide3(int newValue)
+    {
+      _side3 = newValue;
+    }
   }
 }
