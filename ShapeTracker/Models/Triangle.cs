@@ -8,7 +8,7 @@ namespace ShapeTracker.Models
       get { return _side1; }
       set { _side1 = value; }
     }
-    public int Side2 { get; }
+    public int Side2 { get; set; }
 
     public Triangle(int length1, int length2)
     {
