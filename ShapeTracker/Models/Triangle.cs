@@ -36,11 +36,11 @@ namespace ShapeTracker.Models
       } 
       else if ((Side1 != Side2) && ((Side1 != _side3)) && ((Side2 != _side3))) 
       {
-        return "scalene";
+        return "scalene triangle";
       }
       else 
       {
-        return "";
+        return "isosceles triangle";
       }
     }
 
