@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace ShapeTracker.Models
 {
   public class Triangle
@@ -10,12 +12,14 @@ namespace ShapeTracker.Models
     }
     public int Side2 { get; set; }
     private int _side3;
+    private static List<Triangle> _instances = new List<Triangle> {};
 
     public Triangle(int length1, int length2, int length3)
     {
       _side1 = length1;
       Side2 = length2;
       _side3 = length3;
+      _instances.Add(this);
     }
 
     public int GetSide3()
@@ -48,5 +52,16 @@ namespace ShapeTracker.Models
       }
     }
 
+    public static List<Triangle> GetAll()
+    {
+      return _instances;
+    }
+
+    public static void ClearAll()
+    {
+      _instances.Clear();
+    }
+
   }
 }
+
